@@ -1,9 +1,9 @@
 :root {
-  --bg: #f8f5ef;
-  --ink: #1f1f1f;
-  --accent: #0f766e;
+  --bg: #f5f1ea;
+  --ink: #1b1b1b;
+  --muted: #4f4f4f;
   --card: #ffffff;
-  --muted: #5a5a5a;
+  --accent: #1f8a70;
 }
 
 * {
@@ -14,30 +14,55 @@ body {
   margin: 0;
   font-family: "Trebuchet MS", Arial, sans-serif;
   color: var(--ink);
-  background: var(--bg);
+  background: radial-gradient(circle at 10% 10%, #fff7e8, var(--bg));
 }
 
 .container {
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 18px;
 }
 
-.site-header {
-  background: linear-gradient(135deg, #e6fffb, #fff6e5);
-  padding: 32px 0 24px;
-  border-bottom: 1px solid #e6e6e6;
+.hero {
+  background: linear-gradient(135deg, #fff1dc, #e7f7f3);
+  padding: 48px 0 36px;
 }
 
-.subtitle {
-  color: var(--muted);
-  margin: 6px 0 16px;
-}
-
-.nav a {
-  margin-right: 12px;
-  text-decoration: none;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
   color: var(--accent);
+  margin: 0 0 6px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 6px 0 8px;
+}
+
+.subhead {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
   font-weight: 700;
 }
 
@@ -46,45 +71,39 @@ body {
 }
 
 .section.alt {
-  background: #fff;
+  background: #ffffff;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+.list {
+  margin: 0;
+  padding-left: 18px;
 }
 
 .card {
   background: var(--card);
-  border: 1px solid #e9e9e9;
+  border: 1px solid #ececec;
   border-radius: 10px;
-  padding: 16px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
 }
 
-.card a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.skills {
-  list-style: none;
-  padding: 0;
+.pill-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skills li {
-  background: #eef2f2;
+.pill-grid span {
+  background: #f1f5f4;
+  border: 1px solid #e5eceb;
   padding: 8px 12px;
   border-radius: 999px;
+  font-size: 14px;
 }
 
-.site-footer {
+.footer {
   text-align: center;
-  padding: 20px 0;
   color: var(--muted);
-  border-top: 1px solid #e6e6e6;
+  padding: 20px 0 30px;
+  border-top: 1px solid #e7e7e7;
 }
